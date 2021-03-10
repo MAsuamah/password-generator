@@ -1,6 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//Character Codes will for generatePassword arguments
+var lowercaseCharCodes = arrayFromMinToMax(97, 122) 
+var uppercaseCharCodes = arrayFromMinToMax(65, 90)
+var specialCharactersCharCodes = arrayFromMinToMax(33, 47)
+var numberCharCodes = arrayFromMinToMax(48, 57).concat(
+  arrayFromMinToMax(58, 64)
+  ).concat(
+  arrayFromMinToMax(91, 96)
+  ).concat(
+  arrayFromMinToMax(123, 126)
+  )
+
 // Write password to the #password input
 function writePassword() {
 
@@ -21,7 +33,6 @@ function writePassword() {
 //Add characterAmount, includeLowercase, includeUppercase, includeSpecialCharacters as arguments. 
 //characterAmount validates number of characters. includeLowercase, includeUppercase, includeSpecialCharacters return as true/false.
   var generatePassword = function (characterAmount, includeLowercase, includeUppercase, includeSpecialCharcters) {
-     String.fromCharCode
 
   }
 
@@ -29,7 +40,6 @@ function writePassword() {
   var arrayFromMinToMax = function (min, max) {
     for (var i = min; i <= max; i++) {
       
-
     }
 
 
