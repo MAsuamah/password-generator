@@ -12,21 +12,20 @@ function writePassword() {
     var includeLowercase = confirm ('Would you like lowercase characters included?');
     var includeUppercase = confirm ('Would you like special characters included?');
     var includeSpecialCharcters = confirm ('Would you like special characters included?');
+    var password = generatePassword();
 
   } else {
     alert('The Character amount must be between 8 and 128 characters.');
   };
 
+  var generatePassword = function (characterAmount, includeLowercase, includeUppercase, includeSpecialCharcters) {
+
+  }
 
 
+var passwordText = document.querySelector("#password");
 
-
-
-
-//var password = generatePassword();
-//var passwordText = document.querySelector("#password");
-
-//passwordText.value = password;
+passwordText.value = password;
 
 }
 
