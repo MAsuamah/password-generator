@@ -21,6 +21,15 @@ function writePassword() {
 //Add characterAmount, includeLowercase, includeUppercase, includeSpecialCharacters as arguments. 
 //characterAmount validates number of characters. includeLowercase, includeUppercase, includeSpecialCharacters return as true/false.
   var generatePassword = function (characterAmount, includeLowercase, includeUppercase, includeSpecialCharcters) {
+     String.fromCharCode
+  }
+
+//This  function creates a with the min charCode number and max charCode number
+  var arrayFromMinToMax = function (min, max) {
+    for (var i = min; i <= max; i++) {
+      
+
+    }
   }
 
 
