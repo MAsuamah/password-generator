@@ -23,7 +23,7 @@ function writePassword() {
   if (characterAmount > 8 && characterAmount < 128) {
     var includeLowercase = confirm ('Would you like lowercase characters included?');
     var includeUppercase = confirm ('Would you like special characters included?');
-    var includeSpecialCharcters = confirm ('Would you like special characters included?');
+    var includeSpecialCharacters = confirm ('Would you like special characters included?');
     var password = generatePassword();
 
   } else {
@@ -34,6 +34,16 @@ function writePassword() {
 //Add characterAmount, includeLowercase, includeUppercase, includeSpecialCharacters as arguments. 
 //characterAmount validates number of characters. includeLowercase, includeUppercase, includeSpecialCharacters return as true/false.
   var generatePassword = function (characterAmount, includeLowercase, includeUppercase, includeSpecialCharcters) {
+    var charCodes = lowercaseCharCodes
+    if (includeUppercase) charCodes = charCodes.concat(uppercaseCharCodes)
+    if (includeLowercase) charCodes = charCodes.concat(lowercaseCharCodes)
+    if (includeSpecialCharacters) charCodes = charCodes.concat(specialCharactersCharCodes)
+
+    var generatingCharacters = []
+    for (var i = 0; i < characterAmount; i++) {
+
+    }
+
 
   }
 
