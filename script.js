@@ -28,7 +28,8 @@ function writePassword() {
 
   } else {
     alert('The Character amount must be between 8 and 128 characters.');
-  };
+  }
+};
 
 //Add characterAmount, includeLowercase, includeUppercase, includeSpecialCharacters as arguments. 
 //characterAmount validates number of characters. includeLowercase, includeUppercase, includeSpecialCharacters return as true/false.
@@ -38,17 +39,19 @@ function writePassword() {
 
 //This  function creates a with the min charCode number and max charCode number
   var arrayFromMinToMax = function (min, max) {
+    var array = [] 
     for (var i = min; i <= max; i++) {
-      
+      array.push (i)  
     }
-
+    return array 
+  };
 
 
 var passwordText = document.querySelector("#password");
 
 passwordText.value = password;
 
-};
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
