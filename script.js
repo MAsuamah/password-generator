@@ -22,6 +22,7 @@ function writePassword() {
 //characterAmount validates number of characters. includeLowercase, includeUppercase, includeSpecialCharacters return as true/false.
   var generatePassword = function (characterAmount, includeLowercase, includeUppercase, includeSpecialCharcters) {
      String.fromCharCode
+
   }
 
 //This  function creates a with the min charCode number and max charCode number
@@ -30,7 +31,7 @@ function writePassword() {
       
 
     }
-  }
+
 
 
 var passwordText = document.querySelector("#password");
