@@ -19,12 +19,15 @@ function writePassword() {
       alert ('Your password must be between 8 and 128 characters!');
     }
  
-  }
+    var generatePassword = function () {
+      //Start off with an empty array in which the password will be generated 
 
+      var generatingCharacters = [];
 
-  //Start off with an empty array in which the password will be generated 
+      
 
-  var generatingCharacters = [];
+    }
+
 
 
   //This  will call the generatePassword function and store it in the variable password
