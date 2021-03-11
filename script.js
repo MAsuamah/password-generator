@@ -12,6 +12,12 @@ function writePassword() {
 
   var characterAmount = prompt ('How Many Characters Would You Like In Your Password?');
 
+  //If they select an appropiate amount loop through characters until the selected character ammount is reached if not alert to choose appropiate character amount
+
+  if (characterAmount > 8 && characterAmount < 128) {
+
+  }
+
 
 
   //This  will call the generatePassword function and store it in the variable password
