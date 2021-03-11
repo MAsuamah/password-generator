@@ -34,6 +34,8 @@ function writePassword() {
     characterAmount = prompt('Your password must be between 8 and 128 characters. How many characters would you like?');
   }
       var includeLowercase = confirm('Would you like lowercase characters included?');
+      console.log(includeLowercase);
+
       var includeUppercase = confirm('Would you like lowercase characters included?');
       var includeNumbers = confirm('Would you like numbers included in you password?');
       var includeSpecialCharacters = confirm('Would you like special characters in your password?');
@@ -48,24 +50,30 @@ function writePassword() {
   }
 
     
-  var generatePassword = function(characterAmount, includeUppercase, includeLowercase, includeNumbers, includeSpecialCharacters) {
+  var generatePassword = function(charAmount, inclUppercase, inclLowercase, inclNumbers, inclSpecialCharacters) {
+    var charAmount = characterAmount
+    var inclUppercase = includeUppercase
+    var inclLowercase = includeLowercase
+    var inclNumbers = includeNumbers
+    var inclSpecialCharacters = includeSpecialCharacters
 
     var codes = []
 
-    if (includeLowercase) codes = codes.concat
+    if (inclLowercase) codes = codes.concat
     (lowercase)
-    if (includeUppercase) codes = codes.concat
+    if (inclUppercase) codes = codes.concat
     (uppercase)
-    if (includeNumbers) codes = codes.concat
+    if (inclNumbers) codes = codes.concat
     (numbers)
-    if (includeSpecialCharacters) codes = codes.concat
+    if (inclSpecialCharacters) codes = codes.concat
     (specialCharacters)
     
     var passwordCharacters = []
-    for (var i = 0; i < characterAmount; i++) {
+    for (var i = 0; i < charAmount; i++) {
     
       var character = codes[Math.floor(Math.random() * codes.length)]
       passwordCharacters.push(String.fromCharCode(character))
+      
     }
     return passwordCharacters.join('')
   }
