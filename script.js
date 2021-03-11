@@ -46,20 +46,20 @@ function writePassword() {
       includeNumbers = confirm('Would you like numbers included in you password?');
       includeSpecialCharacters = confirm('Would you like special characters in your password?');
   }
+
     
   var generatePassword = function(characterAmount, includeUppercase, includeLowercase, includeNumbers, includeSpecialCharacters) {
 
     var codes = []
 
-      if (includeLowercase === true) codes = codes.concat
-      (lowercase)
-      if (includeUppercase === true) codes = codes.concat
-      (uppercase)
-      if (includeNumbers === true) codes = codes.concat
-      (numbers)
-      if (includeSpecialCharacters === true) codes = codes.concat
-      (specialCharacters)
-      debugger;
+    if (includeLowercase) codes = codes.concat
+    (lowercase)
+    if (includeUppercase) codes = codes.concat
+    (uppercase)
+    if (includeNumbers) codes = codes.concat
+    (numbers)
+    if (includeSpecialCharacters) codes = codes.concat
+    (specialCharacters)
     
     var passwordCharacters = []
     for (var i = 0; i < characterAmount; i++) {
