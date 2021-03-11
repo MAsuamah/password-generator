@@ -27,7 +27,7 @@ function writePassword() {
       var includeSpecialCharacters = confirm('Would you like special characters in your password?');
     
   while (!(includeLowercase || includeUppercase || includeNumbers || includeSpecialCharacters)) {
-    alert ('You must inlucde at least 1 character type!');
+    alert ('You must include at least 1 character type!');
 
       includeLowercase =  confirm('Would you like lowercase characters included?');
       includeUppercase =  confirm('Would you like lowercase characters included?');
@@ -44,9 +44,27 @@ function writePassword() {
      var randomLowercase = lowercase[Math.floor(Math.random() * lowercase.length)];
      var charCode= String.fromCharCode(randomLowercase);
      passwordCharacters.push(charCode);
-  }
-  
-}
+    }
+
+    if (includeUppercase === true) {
+      var uppercase = charArrayLowHigh (65, 90);
+      var randomUppercase = uppercase[Math.floor(Math.random() * uppercase.length)];
+      var charCode= String.fromCharCode(randomUppercase);
+      passwordCharacters.push(charCode);  
+    }
+
+    if (includeNumbers === true) {
+      var numbers = charArrayLowHigh (65, 90);
+      var randomNumbers = numbers[Math.floor(Math.random() * numbers.length)];
+      var charCode= String.fromCharCode(randomNumbers);
+      passwordCharacters.push(charCode); 
+
+    if (includeSpecialCharacters === true) {
+      var specialCharacters = charArrayLowHigh (65, 90);
+      var randomSpecialC = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+      var charCode= String.fromCharCode(randomSpecialC);
+      passwordCharacters.push(charCode); 
+    }
 
 
 
