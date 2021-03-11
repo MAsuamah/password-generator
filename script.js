@@ -16,38 +16,48 @@ function writePassword() {
 
   //Ask how many characters the person would like 
 
-  var characterAmount = prompt ('How Many Characters Would You Like In Your Password?');
+  var characterAmount = prompt('How Many Characters Would You Like In Your Password?');
 
   //Prompts to optain values that wil be used in the generatePassword function
   if (characterAmount > 8 && characterAmount < 128) {
-    var includeLowercase =  confirm ('Would you like lowercase characters included?');
-    var includeUppercase =  confirm ('Would you like lowercase characters included?');
-    var includeNumbers = confirm ('Would you like numbers included in you password?');
-    var includeSpecialCharacters = confirm ('Would you like special characters in your password?');
+    var includeLowercase =  confirm('Would you like lowercase characters included?');
+    var includeUppercase =  confirm('Would you like lowercase characters included?');
+    var includeNumbers = confirm('Would you like numbers included in you password?');
+    var includeSpecialCharacters = confirm('Would you like special characters in your password?');
 
-    } else  {
-      alert ('Your password must be between 8 and 128 characters!');
+    } else {
+      alert('Your password must be between 8 and 128 characters!');
     }
  
-    var generatePassword = function (chacterAmount, lowercase, uppercase, specialCharacters, numbers, ) {
+    var generatePassword = function(characterAmount, lowercase, uppercase, specialCharacters, numbers, ) {
       
-    
-      //Using prompt/confirm values to start creating password
-      if (includeLowercase === true) {
-      
+      //Using prompt/confirm values to generate characters from each selected by  person
+      if(includeLowercase === true) {
+        var lowercase = randomCharacter(97, 122);
+        String.fromCharCode(lowercase);
      }
 
       if (includeUppercase === true) {
-        
+        var uppercase = randomCharacter(65,90);
+        String.fromCharCode(uppercase);
       }
 
       if (includeNumbers === true) {
-        
+        var numbers = randomCharacter(48, 57);
+        String.fromCharCode(numbers);
       }
 
       if (includeSpecialCharacters === true) {
-        
+        var specialCharacters = randomCharacter(48, 57).concat(
+          randomCharacter(58, 64)
+          ).concat(
+            randomCharacter(91, 96)
+          ).concat(
+            randomCharacter(123, 126)
+          );
+        String.fromCharCode(specialCharacters);
       }
+    }
 
 
 
