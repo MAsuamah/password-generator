@@ -1,5 +1,15 @@
+
+
 //Returns the Generate Password Button
 var generateBtn = document.querySelector("#generate");
+
+//Function to be used to generate random characters (code used from Module 3 game)
+var randomCharacter = function(min, max) {
+  var value = Math.floor(Math.random() * (max - min) + min);
+
+  return value;
+};
+
 
 // This Function will loop through characters until it creates a password that meets the selected character amount and selected criteria.
 function writePassword() {
@@ -19,14 +29,25 @@ function writePassword() {
       alert ('Your password must be between 8 and 128 characters!');
     }
  
-    var generatePassword = function () {
-      //Start off with an empty array in which the password will be generated 
-
-      var generatingCharacters = [];
-
+    var generatePassword = function (chacterAmount, lowercase, uppercase, specialCharacters, numbers, ) {
       
+    
+      //Using prompt/confirm values to start creating password
+      if (includeLowercase === true) {
+      
+     }
 
-    }
+      if (includeUppercase === true) {
+        
+      }
+
+      if (includeNumbers === true) {
+        
+      }
+
+      if (includeSpecialCharacters === true) {
+        
+      }
 
 
 
