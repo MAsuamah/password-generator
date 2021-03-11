@@ -4,6 +4,10 @@ var generateBtn = document.querySelector("#generate");
 // This Function will loop through characters until it creates a password that meets the selected character amount and selected criteria.
 function writePassword() {
 
+  //Start off with an empty array in which the password will be generated 
+
+  var generatingCharacters = [];
+
 
 
   //This  will call the generatePassword function and store it in the variable password
