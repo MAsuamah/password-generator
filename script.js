@@ -5,10 +5,12 @@ var generateBtn = document.querySelector("#generate");
 
 //Function to be used to generate random characters (code used from Module 3 game)
 
-var randomCharacter = function(min, max) {
-  var value = Math.floor(Math.random() * (max - min) + min);
-
-  return value;
+var charArrayLowHigh = function (low, high ) {
+  var charArray = []
+  for (let i = low; i <= high; i ++) {
+    charArray.push(i)
+  }
+  return charArray
 };
 
 // This Function will loop through characters until it creates a password that meets the selected character amount and selected criteria.
@@ -33,41 +35,18 @@ function writePassword() {
       includeSpecialCharacters = confirm('Would you like special characters in your password?');
   }
     
-  var generatePassword = function(characterAmount, lowercase, uppercase, specialCharacters, numbers) {
-    
-    var charCodes = []
+  var generatePassword = function(lowercase) {
+
     var passwordCharacters = []
 
-    for (var i = 0; i < characterAmount; i++) {
-
     if (includeLowercase === true) {
-      var lowercase = randomCharacter(97, 122);
-      charCodes.concat(String.fromCharCode(lowercase));       
-    }
-
-    if (includeUppercase === true) {
-      var uppercase = randomCharacter(65, 90);
-      charCodes.concat(String.fromCharCod(uppercase));
-    }
-
-    if (includeNumbers === true) {
-      var numbers = randomCharacter(48, 57);
-      charCodes.concat(String.fromCharCod(numbers));
-    }
-
-    if (includeSpecialCharacters === true) {
-      var specialCharacters = randomCharacter(48, 57).concat(
-        randomCharacter(58, 64)
-        ).concat(
-          randomCharacter(91, 96)
-        ).concat(
-          randomCharacter(123, 126)
-        );
-        charCodes.concat(String.fromCharCod(specialCharacters));
-    }
+     var lowercase = charArrayLowHigh (97, 122);
+    
   }
-  return passwordCharacters.join ('');
+  
 }
+
+
 
 
 //This  will call the generatePassword function and store it in the variable password
