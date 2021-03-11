@@ -8,6 +8,10 @@ function writePassword() {
 
   var generatingCharacters = [];
 
+  //Ask how many characters the person would like 
+
+  var characterAmount = prompt ('How Many Characters Would You Like In Your Password?');
+
 
 
   //This  will call the generatePassword function and store it in the variable password
