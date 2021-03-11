@@ -41,7 +41,9 @@ function writePassword() {
 
     if (includeLowercase === true) {
      var lowercase = charArrayLowHigh (97, 122);
-    
+     var randomLowercase = lowercase[Math.floor(Math.random() * lowercase.length)];
+     var charCode= String.fromCharCode(randomLowercase);
+     passwordCharacters.push(charCode);
   }
   
 }
