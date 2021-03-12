@@ -34,8 +34,6 @@ function writePassword() {
     characterAmount = prompt('Your password must be between 8 and 128 characters. How many characters would you like?');
   }
       var includeLowercase = confirm('Would you like lowercase characters included?');
-      console.log(includeLowercase);
-
       var includeUppercase = confirm('Would you like lowercase characters included?');
       var includeNumbers = confirm('Would you like numbers included in you password?');
       var includeSpecialCharacters = confirm('Would you like special characters in your password?');
