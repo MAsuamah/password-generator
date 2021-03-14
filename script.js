@@ -55,10 +55,10 @@ function writePassword() {
     var inclNumbers = includeNumbers
     var inclSpecialCharacters = includeSpecialCharacters
 
-    //This empty array will hold all the characters code arrays that the user selected to inlude in their password. 
+    //This empty array will hold all the character code arrays from charArrayLowHigh[] that the user selected to include in their password. 
     var codes = []
 
-    //These conditional statements will check if the confirmation prompts were true. If true, the character code array will be merged into the empty codes[] array.
+    //These conditional statements will check if the confirmation prompts were true. If true, the character code array (charArrayLowHigh[]) will be merged into the empty codes[] array.
     if (inclLowercase) codes = codes.concat
     (lowercase)
     if (inclUppercase) codes = codes.concat
