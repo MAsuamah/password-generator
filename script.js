@@ -10,7 +10,7 @@ var charArrayLowHigh = function (low, high ) {
   return charArray
 };
 
-//The four vraibles provide the min and max codes for each chractertype. Using the function above the character codes will be looped until the function reaches the last character code that is assigned to the character type.
+//These four variables provide the min and max codes for each character type. Using the function above the character codes will be looped until the function reaches the last character code that is assigned to the character type.
 var lowercase = charArrayLowHigh (97, 122);
 var uppercase = charArrayLowHigh (65, 90);
 var numbers = charArrayLowHigh (48, 57);
@@ -32,33 +32,33 @@ function writePassword() {
   while (characterAmount < 8 || characterAmount > 128) {
     characterAmount = prompt('Your password must be between 8 and 128 characters. How many characters would you like?');
   }
-      var includeLowercase = confirm('Would you like lowercase characters included?');
-      var includeUppercase = confirm('Would you like uppercase characters included?');
-      var includeNumbers = confirm('Would you like numbers included in you password?');
-      var includeSpecialCharacters = confirm('Would you like special characters in your password?');
+      var includeLowercase = confirm('Would you like lowercase characters included in your password?');
+      var includeUppercase = confirm('Would you like uppercase characters included in your password?');
+      var includeNumbers = confirm('Would you like numbers included in your password?');
+      var includeSpecialCharacters = confirm('Would you like special characters included in your password?');
     
   while (!(includeLowercase || includeUppercase || includeNumbers || includeSpecialCharacters)) {
     alert ('You must include at least 1 character type!');
 
-      includeLowercase = confirm('Would you like lowercase characters included?');
-      includeUppercase = confirm('Would you like uppercase characters included?');
-      includeNumbers = confirm('Would you like numbers included in you password?');
-      includeSpecialCharacters = confirm('Would you like special characters in your password?');
+      includeLowercase = confirm('Would you like lowercase characters included in your password?');
+      includeUppercase = confirm('Would you like uppercase characters included in your password?');
+      includeNumbers = confirm('Would you like numbers included in your password?');
+      includeSpecialCharacters = confirm('Would you like special characters included in your password?');
   }
 
     
   var generatePassword = function(charAmount, inclUppercase, inclLowercase, inclNumbers, inclSpecialCharacters) {
-    //The values entered values from the prompts above will be assigned to new variables.
+    //The values from the above prompts will be assigned to new variables and passed as arguments for the generatePassword function.
     var charAmount = characterAmount
     var inclUppercase = includeUppercase
     var inclLowercase = includeLowercase
     var inclNumbers = includeNumbers
     var inclSpecialCharacters = includeSpecialCharacters
 
-    //This  empty array will hold all the characters in the generated password.
+    //This empty array will hold all the characters code arrays that the user selected to inlude in their password. 
     var codes = []
 
-    //These conditional statements will check if the confirmation prompts were true. If true, the character code arrays will be merged together for only those that are true.
+    //These conditional statements will check if the confirmation prompts were true. If true, the character code arrays will be merged together into the empty codes[] array.
     if (inclLowercase) codes = codes.concat
     (lowercase)
     if (inclUppercase) codes = codes.concat
@@ -68,17 +68,17 @@ function writePassword() {
     if (inclSpecialCharacters) codes = codes.concat
     (specialCharacters)
     
-   //This empty array will be where the genereted characters are pushed.
+   //This empty array will be where the generated characters are pushed.
     var passwordCharacters = []
 
-    //This for loop will provide a random character from the codes array until the character amount selected by the user is reached.
+    //This for loop will provide a random character code from the codes[] array until the character amount selected by the user is reached. The String.fromCharCode method will convert the codes into its designated character.
     for (var i = 0; i < charAmount; i++) {
     
       var character = codes[Math.floor(Math.random() * codes.length)]
       passwordCharacters.push(String.fromCharCode(character))
       
     }
-    //The function will use the join method to join the characters provided in the above for loop into a string, generating a password.
+    //The function will use the join method to join the characters provided in passwordCharacters[] array into a string, generating a password.
     return passwordCharacters.join('')
   }
 
