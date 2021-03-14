@@ -13,8 +13,8 @@ var charArrayLowHigh = function (low, high ) {
 //The four vraibles provide the min and max codes for each chractertype. Using the function above the character codes will be looped until the function reaches the last character code that is assigned to the character type.
 var lowercase = charArrayLowHigh (97, 122);
 var uppercase = charArrayLowHigh (65, 90);
-var numbers = charArrayLowHigh (65, 90);
-var specialCharacters = charArrayLowHigh(48, 57).concat(
+var numbers = charArrayLowHigh (48, 57);
+var specialCharacters = charArrayLowHigh(33, 47).concat(
  charArrayLowHigh(58, 64)
  ).concat(
    charArrayLowHigh(91, 96)
@@ -33,7 +33,7 @@ function writePassword() {
     characterAmount = prompt('Your password must be between 8 and 128 characters. How many characters would you like?');
   }
       var includeLowercase = confirm('Would you like lowercase characters included?');
-      var includeUppercase = confirm('Would you like lowercase characters included?');
+      var includeUppercase = confirm('Would you like uppercase characters included?');
       var includeNumbers = confirm('Would you like numbers included in you password?');
       var includeSpecialCharacters = confirm('Would you like special characters in your password?');
     
@@ -41,7 +41,7 @@ function writePassword() {
     alert ('You must include at least 1 character type!');
 
       includeLowercase = confirm('Would you like lowercase characters included?');
-      includeUppercase = confirm('Would you like lowercase characters included?');
+      includeUppercase = confirm('Would you like uppercase characters included?');
       includeNumbers = confirm('Would you like numbers included in you password?');
       includeSpecialCharacters = confirm('Would you like special characters in your password?');
   }
