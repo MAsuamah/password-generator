@@ -78,7 +78,7 @@ function writePassword() {
       passwordCharacters.push(String.fromCharCode(character))
       
     }
-    //The function will use the join method to join the characters provided in passwordCharacters[] array into a string, generating a password.
+    //The function will use the join method to join the characters provided in the passwordCharacters[] array into a string, generating a password.
     return passwordCharacters.join('')
   }
 
