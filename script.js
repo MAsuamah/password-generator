@@ -58,7 +58,7 @@ function writePassword() {
     //This empty array will hold all the characters code arrays that the user selected to inlude in their password. 
     var codes = []
 
-    //These conditional statements will check if the confirmation prompts were true. If true, the character code arrays will be merged together into the empty codes[] array.
+    //These conditional statements will check if the confirmation prompts were true. If true, the character code array will be merged into the empty codes[] array.
     if (inclLowercase) codes = codes.concat
     (lowercase)
     if (inclUppercase) codes = codes.concat
@@ -71,7 +71,7 @@ function writePassword() {
    //This empty array will be where the generated characters are pushed.
     var passwordCharacters = []
 
-    //This for loop will provide a random character code from the codes[] array until the character amount selected by the user is reached. The String.fromCharCode method will convert the codes into its designated character.
+    //This for loop will provide a random character code from the codes[] array until the character amount selected by the user is reached. The String.fromCharCode method will convert the codes into its designated character. The array will be pushed into the empty passwordCharacters[] array. 
     for (var i = 0; i < charAmount; i++) {
     
       var character = codes[Math.floor(Math.random() * codes.length)]
@@ -90,7 +90,7 @@ function writePassword() {
     var passwordText = document.querySelector("#password");
 
 
-    //This function will display in the text area the value from the generatePassword function
+    //This function will display the value from the generatePassword function in the text area.
     passwordText.value = password;
 }
 // Clicking the generate password button will start the write password function.
