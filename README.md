@@ -3,12 +3,21 @@ This secure password generator has the ability to provide strong passwords that 
 The password generator will provide a string of random characters with the purpose of protecting sensitive data and providing greater security.
 
 ## How to Use
-* To generate your password, click the generate password button.
-* You will be given a series of prompts at the top of the page. 
-* First you will enter the amount of characters you want in your password. Your password must be between 8 and 128 characters.
-* You will be asked which character types you would like to include in your password. You have the choices of lowercase, uppercase, special characters, 
-and numbers. You must choose at least one character type to generate your password. 
-* When all prompts are answered, a password will be displayed in the text box on the page, and the characters will match the criteria selected by the user.
+
+### Get Started
+To generate your password, click the generate password button. You will be given a series of prompts at the top of the page. 
+
+### Choose the Amount of Characters
+First you will enter the amount of characters you want in your password. Your password must be between 8 and 128 characters.
+
+### Choose the which Characters You Would Like in Your Password
+You will be asked which character types you would like to include in your password. You have the choices of: 
+* Lowercase
+* Uppercase
+* Special characters 
+* Numbers 
+
+You must choose at least one character type to generate your password. When all prompts are answered, a password will be displayed in the text box on the page, and the characters will match the criteria selected by the user.
 
 <img width="890" alt="Screen Shot 2021-03-14 at 10 57 14 AM" src="https://user-images.githubusercontent.com/77217156/111073178-1a96c400-84b4-11eb-81b2-8e79a059153b.png">
 
